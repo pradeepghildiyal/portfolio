@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Clients = () => {
 	return (
-		<section className="bg-white justify-center ">
+		<section className="bg-primary-900 justify-center ">
 			<div className="py-32 flex justify-between flex-wrap w-full gap-8 container mx-auto px-6">
 				<Image
 					alt={clientImages.logo}

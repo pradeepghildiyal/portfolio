@@ -23,7 +23,7 @@ const Hero = () => {
 						<h1 className="text-base-100 uppercase font-bold">
 							Hi, I am Pradeep Ghildiyal
 						</h1>
-						<h3 className="text-2xl font-bold mt-6 leading-normal text-white">
+						<h3 className="text-2xl md:text-4xl lg:text-6xl font-bold mt-6 leading-normal text-white">
 							Proffesional{" "}
 							<span className="before:block before:absolute before:top-2/3 before:right-0 before:bottom-0 before:left-0 before:h-1/3 before:bg-orange-400 relative inline-block">
 								<span className="relative">Web Developer</span>

@@ -16,7 +16,7 @@ const font = Montserrat({ subsets: ["latin"] });
 export default function Home() {
 	return (
 		<main className="font.className h-screen bg-primary-50">
-			<div className="">
+			<div className="bg-primary-50">
 				{/* <Navbar /> */}
 				<NewNav />
 				<Hero />
