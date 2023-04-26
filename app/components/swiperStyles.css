@@ -1,0 +1,11 @@
+.mySwiper .swiper-slide-visible {
+	width: 25%;
+	height: 100%;
+	opacity: 0.4;
+	scale: 0.7;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+	opacity: 1;
+	scale: 1.1;
+}
