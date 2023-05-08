@@ -13,6 +13,8 @@ import {
 } from "swiper";
 
 import { AiFillStar } from "react-icons/ai";
+import { GiStarFormation } from "react-icons/gi";
+
 import { Star } from "../assets/images";
 import Image from "next/image";
 
@@ -21,12 +23,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/bundle";
 import "./swiperStyles.css";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 // Import Swiper styles
 const Carousel = ({ reviews }) => {
 	const [thumbsSwiper, setThumbsSwiper] = useState(null);
 	const [thumbnail, setThumbsnail] = useState(null);
+
 	return (
 		<section className="py-20">
 			{/* Slider */}
@@ -56,15 +59,16 @@ const Carousel = ({ reviews }) => {
 			>
 				<div className="flex items-center w-full m-auto">
 					{reviews.map((review, index) => (
-						<div className="flex justify-center">
+						<div key={index + "Slide"} className="flex justify-center">
 							<SwiperSlide className="flex flex-col items-center py-12 px-12">
 								<div className="flex text-2xl gap-4">
-									{/* {[...Array(review.rating)].map((star) => {
-										return <AiFillStar className="text-yellow-500" />;
-									})} */}
 									{[...Array(review.rating)].map((star) => {
 										return (
-											<Image src={Star} height={40} width={40} key={star} />
+											// <Image src={Star} height={40} width={40} key={star} />
+											<GiStarFormation
+												key={index}
+												className="text-primary-900"
+											/>
 										);
 									})}
 								</div>
@@ -97,7 +101,10 @@ const Carousel = ({ reviews }) => {
 			>
 				{/* Thumbnails */}
 				{reviews.map((review, index) => (
-					<SwiperSlide className="rounded-full overflow-hidden flex items-start gap-8 ">
+					<SwiperSlide
+						key={index + "thumb"}
+						className="rounded-full overflow-hidden flex items-start gap-8 "
+					>
 						<Image
 							src={review.image}
 							alt="image"

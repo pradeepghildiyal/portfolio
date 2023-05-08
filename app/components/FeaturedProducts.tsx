@@ -3,6 +3,8 @@ import React from "react";
 import { mockup1 } from "../assets/images/icons";
 import Product from "./Product";
 
+import products from "../data/products";
+
 const FeaturedProducts = () => {
 	return (
 		<section className="container mx-auto px-6 " id="products">
@@ -13,10 +15,10 @@ const FeaturedProducts = () => {
 				</span>{" "}
 				Products
 			</h3>
-			<div className="mt-8 grid gap-8">
-				<Product />
-				<Product />
-				<Product />
+			<div className="mt-12 grid gap-8">
+				{products.map((product) => {
+					return <Product key={product.id} product={product} />;
+				})}
 			</div>
 		</section>
 	);

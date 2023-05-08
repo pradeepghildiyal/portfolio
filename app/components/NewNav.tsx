@@ -21,7 +21,10 @@ function classNames(...classes) {
 
 function Example() {
 	return (
-		<Disclosure as="nav" className="bg-primary-900">
+		<Disclosure
+			as="nav"
+			className="bg-primary-900 fixed w-full shadow-sm shadow-primary-500 z-50"
+		>
 			{({ open }) => (
 				<>
 					<div className="container m-auto px-2 sm:px-6 lg:px-8">

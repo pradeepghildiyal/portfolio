@@ -19,7 +19,7 @@ module.exports = {
 			lg: "976px",
 			xl: "1240px",
 		},
-		darkMode: "class",
+		darkMode: ["class", '[data-theme="dark"]'],
 		extend: {
 			backgroundImage: {
 				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

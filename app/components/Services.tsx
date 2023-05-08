@@ -5,9 +5,8 @@ import { MdSlowMotionVideo } from "react-icons/md";
 import { BsLaptop } from "react-icons/bs";
 import { TbPointer } from "react-icons/tb";
 
-import { lens, media, mobile, pointer } from "../assets/images/icons";
 import ServiceCard from "./ServiceCard";
-import { title } from "process";
+import services from "../data/services";
 
 const Services = () => {
 	return (
@@ -22,26 +21,16 @@ const Services = () => {
 				</h3>
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16 items-stretch">
 					{/* Service Card */}
-					<ServiceCard
-						icon={<HiOutlineMagnifyingGlass />}
-						title="UI Design"
-						paragraph="Varius amet, integer tellus non eget viverra. Ultrices tellus donec gravida id sed senectus dolor cursus sed. "
-					/>
-					<ServiceCard
-						icon={<MdSlowMotionVideo />}
-						title="Motion Design"
-						paragraph="Porta sit curabitur tempor nulla diam. Lacus ligula sem tristique egestas orci cursus lectus ut."
-					/>
-					<ServiceCard
-						icon={<BsLaptop />}
-						title="Prototype"
-						paragraph="Ridiculus nulla eu ultricies auctor purus. Tristique facilisis fermentum non in."
-					/>
-					<ServiceCard
-						icon={<TbPointer />}
-						title="UX Research"
-						paragraph="Ac non massa non accumsan eget congue pellentesque neque. Pulvinar aliquet at puru."
-					/>
+					{services.map((service) => {
+						return (
+							<ServiceCard
+								key={service.id}
+								icon={service.icon}
+								title={service.title}
+								paragraph={service.subtitle}
+							/>
+						);
+					})}
 				</div>
 			</div>
 		</section>
