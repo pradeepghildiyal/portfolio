@@ -55,7 +55,10 @@ const MyModal = ({ product }) => {
 							<div className="mt-4 flex flex-wrap gap-4">
 								{product.tags.map((tag) => {
 									return (
-										<span className="bg-primary-800 text-primary-50 bg-opacity-80 font-light px-4 py-2 rounded-md">
+										<span
+											key={tag}
+											className="bg-primary-800 text-primary-50 bg-opacity-80 font-light px-4 py-2 rounded-md"
+										>
 											{tag}
 										</span>
 									);
@@ -64,7 +67,10 @@ const MyModal = ({ product }) => {
 							<div className="mt-2 flex flex-wrap gap-4">
 								{product.technologies.map((tech) => {
 									return (
-										<span className="bg-primary-800 text-primary-50 bg-opacity-80 font-light px-4 py-2 rounded-md">
+										<span
+											key={tech}
+											className="bg-primary-800 text-primary-50 bg-opacity-80 font-light px-4 py-2 rounded-md"
+										>
 											{tech}
 										</span>
 									);

@@ -59,14 +59,14 @@ const Carousel = ({ reviews }) => {
 			>
 				<div className="flex items-center w-full m-auto">
 					{reviews.map((review, index) => (
-						<div key={index + "Slide"} className="flex justify-center">
+						<div key={index + "_slide"} className="flex justify-center">
 							<SwiperSlide className="flex flex-col items-center py-12 px-12">
 								<div className="flex text-2xl gap-4">
-									{[...Array(review.rating)].map((star) => {
+									{[...Array(review.rating)].map((star, i) => {
 										return (
 											// <Image src={Star} height={40} width={40} key={star} />
 											<GiStarFormation
-												key={index}
+												key={"slide_" + i}
 												className="text-primary-900"
 											/>
 										);
@@ -102,7 +102,7 @@ const Carousel = ({ reviews }) => {
 				{/* Thumbnails */}
 				{reviews.map((review, index) => (
 					<SwiperSlide
-						key={index + "thumb"}
+						key={index + "_thumb"}
 						className="rounded-full overflow-hidden flex items-start gap-8 "
 					>
 						<Image

@@ -15,7 +15,10 @@ const Technologies = () => {
 							<div className="h-full">
 								{technologies.map((tech) => {
 									return (
-										<Tab.Panel className="p-20  bg-primary-900 rounded-md h-full text-primary-100 flex  flex-col items-stretch ">
+										<Tab.Panel
+											key={tech.id}
+											className="p-20  bg-primary-900 rounded-md h-full text-primary-100 flex  flex-col items-stretch "
+										>
 											<h3 className="font-bold text-4xl text-primary-50 text-center">
 												Working with {/* Highlight */}{" "}
 												<span className="before:block before:absolute before:top-2/3 before:right-0 before:bottom-0 before:left-0 before:h-1/3 before:bg-orange-500 before:opacity-100 relative inline-block">
@@ -43,7 +46,7 @@ const Technologies = () => {
 							<div className="flex flex-col gap-4">
 								{technologies.map((tech) => {
 									return (
-										<Tab className="focus:outline-none w-full">
+										<Tab key={tech.id} className="focus:outline-none w-full">
 											{({ selected }) => (
 												/* Use the `selected` state to conditionally style the selected tab. */
 												<div
