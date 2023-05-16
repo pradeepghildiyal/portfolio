@@ -43,10 +43,10 @@ function ThemeSwitcher() {
 					name="theme"
 					className="text-primary-100 w-full py-1 px-4 bg-primary-800 rounded-md capitalize outline-none border-none form-select appearance-none pl-8"
 				>
-					{themes.map((item) => {
+					{themes.map((item, index) => {
 						return (
 							<option
-								key={item}
+								key={item + index}
 								value={item}
 								className="py-2 rounded-md capitalize bg-primary-700 mt-2 hover:bg-primary-600 outline-none"
 							>
